@@ -6,10 +6,10 @@ import (
 )
 
 type BookList struct {
-	bookDynamoDb infrastructure.BookDynamoDb
+	bookDynamoDb infrastructure.BookRepository
 }
 
-func NewBookList(bookDynamoDb infrastructure.BookDynamoDb) *BookList {
+func NewBookList(bookDynamoDb infrastructure.BookRepository) *BookList {
 	return &BookList{
 		bookDynamoDb,
 	}

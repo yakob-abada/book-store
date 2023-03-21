@@ -13,7 +13,7 @@ type BookDynamoDb struct {
 	tableName string
 }
 
-func NewBook(svc *dynamodb.DynamoDB, tableName string) *BookDynamoDb {
+func NewBookDynamoDb(svc *dynamodb.DynamoDB, tableName string) *BookDynamoDb {
 	return &BookDynamoDb{
 		svc:       svc,
 		tableName: tableName,

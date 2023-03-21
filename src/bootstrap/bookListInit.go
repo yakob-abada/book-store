@@ -16,5 +16,5 @@ func CreateBookList() *application.BookList {
 	// Create DynamoDB client
 	svc := dynamodb.New(sess)
 
-	return application.NewBookList(*infrastructure.NewBook(svc, "book"))
+	return application.NewBookList(infrastructure.NewBookDynamoDb(svc, "book"))
 }
